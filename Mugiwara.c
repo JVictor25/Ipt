@@ -5,4 +5,3 @@ int main(int argc, char const *argv[])
     printf("Kaizoku-o ore wa naru!");
     return 0;
 }
-
