@@ -2,9 +2,7 @@
 int main(int argc, char const *argv[])
 {
     int thor, starlord, homen_aranha;
-    scanf("%d", &thor);
-    scanf("%d", &starlord);
-    scanf("%d", &homen_aranha);
+    scanf("%d %d %d ", &thor, &starlord, &homen_aranha);
    if (thor==starlord && thor==homen_aranha)
    {
     printf("Empate");
