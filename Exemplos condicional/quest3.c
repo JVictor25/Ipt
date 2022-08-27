@@ -1,33 +1,34 @@
+#include <stdio.h>
 int main(){
-    double n, k, f, c;
-    char e, C, F, K;
-    scanf("%lf %c", &n, &e);
-    C="c";
-    F="f";
-    K="k";
-    if (e==C)
-    {c = n ;
-     k = c + 273.15;
-     f = (c * 1.8) + 32;
-     printf("Kelvin = %lf K", k);
-     printf("Farenheit = %lf ºF", f);
-     printf("Celsius = %lf ºC", c);
+    double valor, kelvin, farenheit, celsius;
+    char escala, C, F, K;
+    scanf("%lf %c", &valor, &escala);
+    C='c';
+    F='f';
+    K='k';
+    if (escala==C)
+    {celsius = valor ;
+     kelvin = celsius + 273.15;
+     farenheit = (celsius * 1.8) + 32;
+     printf("Kelvin = %.2lf K\n", kelvin);
+     printf("Farenheit = %.2lf ºF\n", farenheit);
+     printf("Celsius = %.2lf ºC\n", celsius);
     }
-    if (e==F)
-    {f = n ;
-     k = (f+32/1.8) + 273.15;
-     c = (f+32/1.8);
-     printf("Kelvin = %lf K", k);
-     printf("Farenheit = %lf ºF", f);
-     printf("Celsius = %lf ºC", c);
+    if (escala==F)
+    {farenheit = valor ;
+     kelvin = (farenheit+32/1.8) + 273.15;
+     celsius = (farenheit+32/1.8);
+     printf("Kelvin = %.2lf K\n", kelvin);
+     printf("Farenheit = %.2lf ºF\n", farenheit);
+     printf("Celsius = %.2lf ºC\n", celsius);
     }
-    if (e==K)
-    {k = n ;
-     c = k - 273.15;
-     f = ((k - 273.15) * 1.8) + 32;
-     printf("Kelvin = %lf K", k);
-     printf("Farenheit = %lf ºF", f);
-     printf("Celsius = %lf ºC", c);
+    if (escala==K)
+    {kelvin = valor ;
+     celsius = kelvin - 273.15;
+     farenheit = ((kelvin - 273.15) * 1.8) + 32;
+     printf("Kelvin = %.2lf K\n", kelvin);
+     printf("Farenheit = %.2lf ºF\n", farenheit);
+     printf("Celsius = %.2lf ºC\n", celsius);
     }
 return 0;
 }
