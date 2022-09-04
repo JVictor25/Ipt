@@ -3,7 +3,7 @@ int Vidro, Plástico, Papel, Orgânico, Metal, Eletrônicos, i;
 char l;
 int main(void) 
 {
-  for(i=0; i<g10; i++){
+  for(i=0; i<10; i++){
     scanf("%c", &l);
   switch(l){
     case 'V': Vidro++;break;
