@@ -1,5 +1,5 @@
 #include <stdio.h>
-int i, num, k, h, mediaG, erro_harmonico, erro_geometrico, erro_medio;
+int i, num, k, h;
 int main(void) {
  scanf("%d", &num);
  if (num<=0)printf("Você entrou com %d, tente de novo na próxima", num);
