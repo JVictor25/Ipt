@@ -1,46 +1,59 @@
 #include <stdio.h>
-void bubble_sort(int vetor[], int tamanho){
-	int aux, i, j;
-	for(j=tamanho-1; j>=1; j--){
-		for(i=0; i<j; i++){
-			if(vetor[i]>vetor[i+1]){
-				aux=vetor[i];
-                    vetor[i]=vetor[i+1];
-                    vetor[i+1]=aux;
-            }
-        }
-    }
-}    
+ 
 int main() {
- int i, j, k=0, x, y, n, m, aux=0;
- scanf("%d %d", &n, &m);
- int lista1[n], lista2[m], lista3[n+m];
+ int i, j, k, l, n, aux;
+  scanf("%d", &n);
+ int alunos[n];
+ char a[n];
+ char b[n];
+ char c[n];
+ float nota[n];
+ int alunosapro[n];
+ int alunosrec[n];
+ int alunosrep[n];
+ float notaapro[n];
+ float notarec[n];
+ float notarep[n];
+  j=0;
+  k=0;
+  l=0;
  for(i=0; i<n; i++){
-   scanf("%d", &lista1[i]);}
-    for(i=0; i<m; i++){
-   scanf("%d", &lista2[i]);}
-for(i=0; i<n; i++){
-  x=lista1[i];
-  aux=0;
-    for(j=0; j<m; j++){
-      y=lista2[j];
-        if ((x)==(y)){ aux++;}}
-        if (aux==0){
-            lista3[k]=x;
-            k++;}}
-for(i=0; i<m; i++){
-  x=lista2[i];
-  aux=0;
-    for(j=0; j<n; j++){
-      y=lista1[j];
-        if ((x)==(y)){ aux++;}}
-        if (aux==0){
-            lista3[k]=x;
-            k++;}}
+   scanf("%d", &alunos[i]);
+   scanf("%c", &a[i]);
+   scanf("%c", &b[i]);
+   scanf("%c", &c[i]);
+   scanf("%f", &nota[i]);}
+ for(i=0; i<n; i++){
+   if (nota[i]>=7){
+     notaapro[j]=nota[i];
+     alunosapro[j]=alunos[i];
+     j++;
+     }
+   else if (nota[i]>=5.0){
+     notarec[k]=nota[i];
+     alunosrec[k]=alunos[i];
+     k++;
+     }
+   else{
+     notarep[l]=nota[i];
+     alunosrep[l]=alunos[i];
+     l++;
+     }
+   }
+  printf("Aprovados: ");
+  for (i = 0; i < j; i++) {
+        if (i<(j-1)){
+        printf("%d (%.1f), ", alunosapro[i], notaapro[i]);}
+        else { printf("%d (%.1f)", alunosapro[i], notaapro[i]);}}
+  printf("\nRecuperação: ");
   for (i = 0; i < k; i++) {
-bubble_sort(lista3,k);
-for (i = 0; i < k; i++) {
-        printf("%d ", lista3[i]);
-        }
+       if (i<(k-1)){
+        printf("%d (%.1f), ", alunosrec[i], notarec[i]);}
+        else { printf("%d (%.1f)", alunosrec[i], notarec[i]);}}
+  printf("\nReprovados: ");
+  for (i = 0; i < l; i++) {
+      if (i<(l-1)){
+        printf("%d (%.1f), ", alunosrep[i], notarep[i]);}
+        else { printf("%d (%.1f)", alunosrep[i], notarep[i]);}}
  return 0;
-}}
+}
