@@ -3,17 +3,18 @@
 int main() {
  int i, j, x, y; 
  double agua=0, deserto=0, vegetacao=0, recursos=0, hostis=0, peragua, perdeserto, pervegetacao, perrecursos, perhostis, pertotal;
+   scanf("%d %d", &x, &y);
  char matriz[x][y];
- for(j=0; j<y; j++){
- for(i=0; i<x; i++){
-   scanf("%d", &matriz[i][j]);}}
- for(j=0; j<y; j++){
- for(i=0; i<x; i++){
-   if ((matriz[i][j])=='~')agua++;
-   if ((matriz[i][j])=='X')hostis++;
-   if ((matriz[i][j])=='^')deserto++;
-   if ((matriz[i][j])=='*')vegetacao++;
-   if ((matriz[i][j])=='.')recursos++;
+ for(j=0; j<=x; j++){
+ for(i=0; i<y; i++){
+   scanf("%c", &matriz[j][i]);}}
+ for(j=0; j<=x; j++){
+ for(i=0; i<y; i++){
+   if ((matriz[j][i])=='~')agua++;
+   if ((matriz[j][i])=='X')hostis++;
+   if ((matriz[j][i])=='^')deserto++;
+   if ((matriz[j][i])=='*')vegetacao++;
+   if ((matriz[j][i])=='.')recursos++;
    }}
    pertotal=x*y;
    peragua=((agua/pertotal)*100);
